@@ -6,20 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // دریافت لیست اعداد از کاربر
         System.out.print("لطفاً لیستی از اعداد صحیح را وارد کنید (با کاما از هم جدا کنید): ");
         String input = scanner.nextLine();
 
-        // تبدیل ورودی به لیست از اعداد
         List<Integer> numbers = parseInputToList(input);
 
-        // بررسی اعتبار لیست
         if (numbers == null || numbers.size() < 2) {
             System.out.println("لیست نامعتبر است. لطفاً حداقل دو عدد وارد کنید.");
             return;
         }
 
-        // دریافت عدد هدف از کاربر
         System.out.print("عدد هدف را وارد کنید: ");
         int target;
         try {
@@ -29,7 +25,6 @@ public class Main {
             return;
         }
 
-        // بررسی وجود دو عدد که مجموعشان برابر هدف باشد
         boolean result = TwoSumChecker.hasTwoSum(numbers, target);
         if (result) {
             System.out.println("✅ بله! دو عدد در لیست وجود دارند که مجموع‌شان برابر " + target + " می‌شود.");

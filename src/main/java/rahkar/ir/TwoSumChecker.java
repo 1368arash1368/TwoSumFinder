@@ -39,7 +39,7 @@ public class TwoSumChecker {
             System.out.println("لطفاً لیست اعداد را با فاصله وارد کنید (مثلاً: 2 7 11 15): ");
             String numberInput = scanner.nextLine();
 
-            // بررسی ورودی لیست اعداد
+
             List<Integer> numbers = parseNumberList(numberInput);
             if (numbers.isEmpty()) {
                 System.out.println("❌ لیست اعداد نمی‌تواند خالی باشد.");
@@ -49,13 +49,13 @@ public class TwoSumChecker {
             System.out.print("لطفاً عدد هدف را وارد کنید: ");
             String targetInput = scanner.nextLine();
 
-            // بررسی ورودی عدد هدف
+
             int target = parseTarget(targetInput);
             if (target == Integer.MIN_VALUE) {
-                return; // خطای ورودی قبلاً در parseTarget چاپ شده است.
+                return;
             }
 
-            // بررسی وجود دو عدد که مجموعشان برابر target شود
+
             boolean result;
             try {
                 result = hasTwoSum(numbers, target);
